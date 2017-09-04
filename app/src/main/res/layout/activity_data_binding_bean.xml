@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 下面的命名空间需要写，不然下面android属性都不会显示 -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="user"
+            type="com.wyman.databindingdemo.databindingbean.DataBindingBean"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/userName_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.name ?? `Default name`}"
+            />
+
+        <TextView
+            android:id="@+id/userAge_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.age ?? `Deafault age`}"
+            />
+
+        <TextView
+            android:id="@+id/userDes_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.des ?? `Default des`}"
+            />
+
+        <Button
+            android:id="@+id/databindingbean_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更改bean"
+            android:onClick="doClick"
+            />
+
+    </LinearLayout>
+
+</layout>

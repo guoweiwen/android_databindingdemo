@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="testName"
+            type="String"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <!-- 当url存在时，会自动调用注解方法，即Utils中得loadImage()-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:testName="@{testName}"
+            app:error="@{@string/app_name}"
+            />
+        <!-- 此处不能使用mipmap，会编译不过
+
+        -->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更改BindAdapter"
+            android:onClick="onClick"
+            />
+
+
+    </LinearLayout>
+
+
+</layout>
