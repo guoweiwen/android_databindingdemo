@@ -1,0 +1,3 @@
+# android_databindingdemo
+Android 关于databinding的demo
+主要是一些常用的用法Demo
