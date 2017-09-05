@@ -19,7 +19,6 @@ import java.util.List;
 public class DataRecyclerAdapter extends RecyclerView.Adapter<DataRecyclerAdapter.ViewHolder>{
 
     private List<DataBindingRecyclerBean> mList;
-
     public DataRecyclerAdapter(List<DataBindingRecyclerBean> list){
         this.mList = list;
     }
@@ -39,12 +38,8 @@ public class DataRecyclerAdapter extends RecyclerView.Adapter<DataRecyclerAdapte
         //将数据与itemview绑定
         holder.mItemBinding.setBean(mList.get(position));
 
-        //第二种写法
-//        holder.mItemBinding.setVariable(BR.dataDate,mList.get(position).getDataDate());
-//        holder.mItemBinding.setVariable(BR.dataMsg,mList.get(position).getDataMsg());
-//        holder.mItemBinding.setVariable(BR.dataName,mList.get(position).getDataName());
-//        holder.mItemBinding.executePendingBindings();
     }
+
 
     @Override
     public int getItemCount() {
